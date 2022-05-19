@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="images/logo.png" alt="drawing" width="300"/>
+  <img src="images/logo.svg" alt="drawing" width="300"/>
 </p>
 
 #### Dealing with particles is hard. klarfkit makes it easier.
