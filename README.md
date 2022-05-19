@@ -33,4 +33,4 @@ Please refer to the [Contributing Guide](https://github.com/MichaelHotaling/klar
 
 
 ## Questions? Comments? Requests?
-Please create an issue in the [klarfkit repository](https://github.com/MichaelHotaling/klarfkit).
+Please create an issue in the [klarfkit repository](https://github.com/MichaelHotaling/klarfkit/issues).
