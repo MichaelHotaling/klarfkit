@@ -1,4 +1,4 @@
-# klarfkit
+<img src="images/logo.svg" alt="drawing" width="300"/>
 Python utilities for loading, plotting, and editing wafer defect maps known as KLA Reference Files (KLARFs)
 
 #### Dealing with particles is hard. klarfkit makes it easier.
