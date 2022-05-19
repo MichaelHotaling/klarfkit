@@ -26,7 +26,7 @@ pip install klarfkit
 ```
 
 ## Contributing
-Please refer to the [Contributing Guide](https://github.com/MichaelHotaling/klarfkit/blob/master/CONTRIBUTING.md) before creating any *Pull Requests*. It will make life easier for everyone.
+Please refer to the [Contributing Guide](https://github.com/MichaelHotaling/klarfkit/blob/main/CONTRIBUTING.md) before creating any *Pull Requests*. It will make life easier for everyone.
 
 ## Documentation and tutorials
 [Official documentation](http://klarfkit.readthedocs.io/en/latest/)
