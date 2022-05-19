@@ -1,5 +1,6 @@
-<img src="images/logo.svg" alt="drawing" width="300"/>
-Python utilities for loading, plotting, and editing wafer defect maps known as KLA Reference Files (KLARFs)
+<p align="center">
+  <img src="images/logo.svg" alt="drawing" width="300"/>
+</p>
 
 #### Dealing with particles is hard. klarfkit makes it easier.
 [![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-brightgreen.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
