@@ -74,7 +74,7 @@ class WaferMap:
         for i in range(-int(self.sample_size // self.die_pitch[0]) - 10,
                        int(self.sample_size // self.die_pitch[0]) + 10):
 
-            die_x_lines = self.center_location[0] + (i * self.die_pitch[0])
+            die_x_lines = -self.center_location[0] + (i * self.die_pitch[0])
             height_squared = (self.sample_size / 2) ** 2 - die_x_lines ** 2
             if height_squared > 0:
                 height = np.sqrt(height_squared)
@@ -88,7 +88,7 @@ class WaferMap:
         for i in range(-int(self.sample_size // self.die_pitch[1]) - 10,
                        int(self.sample_size // self.die_pitch[1]) + 10):
 
-            die_y_lines = self.center_location[1] + (i * self.die_pitch[1])
+            die_y_lines = -self.center_location[1] + (i * self.die_pitch[1])
             width_squared = (self.sample_size / 2) ** 2 - die_y_lines ** 2
             if width_squared > 0:
                 width = np.sqrt(width_squared)
