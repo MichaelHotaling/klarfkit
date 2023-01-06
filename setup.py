@@ -7,7 +7,7 @@ setup(
     name="klarfkit",
     py_modules=["klarfkit"],
     version="0.0.2",
-    description="Robust Speech Recognition via Large-Scale Weak Supervision",
+    description="Python utilities for loading, plotting, and editing wafer defect maps known as KLA Reference Files (KLARFs)",
     readme="README.md",
     python_requires=">=3.7",
     author="MichaelHotaling",
@@ -20,9 +20,6 @@ setup(
             open(os.path.join(os.path.dirname(__file__), "requirements.txt"))
         )
     ],
-    entry_points = {
-        'console_scripts': ['whisper=whisper.transcribe:cli'],
-    },
-    include_package_data=True,
+    include_package_data=False,
     extras_require={'dev': ['pytest']},
 )
