@@ -22,7 +22,7 @@ Simply load a klarf file, typically with the extension `.001` into the WaferMap 
 
 ## Installation
 ```bash
-pip install klarfkit
+pip install git+https://github.com/MichaelHotaling/klarfkit.git
 ```
 
 ## Contributing
