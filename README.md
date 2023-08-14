@@ -26,7 +26,10 @@ pip install git+https://github.com/MichaelHotaling/klarfkit.git
 ```
 
 ## Contributing
-Please refer to the [Contributing Guide](https://github.com/MichaelHotaling/klarfkit/blob/main/CONTRIBUTING.md) before creating any *Pull Requests*. It will make life easier for everyone.
+If you have different file versions, please consider adding them to the `sample_files` folder via *Pull Request*.
+
+Any additional files are very welcome and help to ensure the library works for all KLARF versions.
+<!--Please refer to the [Contributing Guide](https://github.com/MichaelHotaling/klarfkit/blob/main/CONTRIBUTING.md) before creating any *Pull Requests*. It will make life easier for everyone.-->
 
 ## Documentation and tutorials
 [Official documentation](http://klarfkit.readthedocs.io/en/latest/)
