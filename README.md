@@ -3,8 +3,7 @@
 </p>
 
 #### Dealing with particles is hard. klarfkit makes it easier.
-[![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-brightgreen.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
-<!--[![PyPI version](https://badge.fury.io/py/klarfkit.svg)](https://badge.fury.io/py/klarfkit)-->
+[![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-brightgreen.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)<!--[![PyPI version](https://badge.fury.io/py/klarfkit.svg)](https://badge.fury.io/py/klarfkit)-->
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ## Introduction
