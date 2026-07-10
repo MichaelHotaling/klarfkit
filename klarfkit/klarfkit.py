@@ -6,6 +6,31 @@ import datetime
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+# Timestamp formats seen across KLARF-producing tools. The original KLARF spec
+# examples use US-style dates, but many tools emit ISO-8601. Try each in order.
+_TIMESTAMP_FORMATS = (
+    "%m-%d-%y %H:%M:%S",
+    "%Y-%m-%d %H:%M:%S",
+    "%m-%d-%Y %H:%M:%S",
+)
+
+
+def _parse_timestamp(value):
+    """Parse a KLARF timestamp string, tolerating several known formats."""
+    for fmt in _TIMESTAMP_FORMATS:
+        try:
+            return datetime.datetime.strptime(value, fmt)
+        except ValueError:
+            continue
+    # Last resort: let datetime try ISO parsing; if that fails, keep the raw
+    # string rather than crashing the whole read.
+    try:
+        return datetime.datetime.fromisoformat(value)
+    except ValueError:
+        return value
+
+
 class WaferMap:
     """
     Represents a wafer map containing defect information and relevant metadata.
@@ -89,14 +114,14 @@ class WaferMap:
 
         self.file_version = file_version
         if file_timestamp:
-            self.file_timestamp = datetime.datetime.strptime(file_timestamp, "%m-%d-%y %H:%M:%S")
+            self.file_timestamp = _parse_timestamp(file_timestamp)
         else:
             self.file_timestamp = datetime.datetime.now()
         
         self.inspection_station = inspection_station
         self.sample_type = sample_type
         if result_timestamp:
-            self.result_timestamp = datetime.datetime.strptime(result_timestamp, "%m-%d-%y %H:%M:%S")
+            self.result_timestamp = _parse_timestamp(result_timestamp)
         else:
             self.result_timestamp = datetime.datetime.now()
 
@@ -340,6 +365,12 @@ class WaferMap:
                 defect_collect = False
 
             elif defect_collect:
+                # Some KLARF dialects interleave per-defect image references
+                # (e.g. 'FILENAME <image path>;') inside the DefectList. These
+                # are not defect records and must be skipped, otherwise they end
+                # up as rows that fail the later numeric ``.astype(float)`` cast.
+                if i.upper().startswith("FILENAME"):
+                    continue
                 defects.append(i.replace(";", "").split())
 
             elif sample_plan_collect and 'SampleTestPlan' not in i:
