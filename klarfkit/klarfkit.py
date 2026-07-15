@@ -330,7 +330,10 @@ class WaferMap:
                 payload['area_per_test'] = float(get_row_value(i))
 
             elif "DefectRecordSpec" in i:
-                for j in i[:-1].split()[2::]:
+                # The trailing ';' is already stripped when the file is read
+                # (see read_klarf's readlines comprehension), so slicing i[:-1]
+                # here truncates the final column name (e.g. 'Y_FOV' -> 'Y_FO').
+                for j in i.split()[2::]:
                     cols.append(j)
 
             elif "DefectList" in i:
